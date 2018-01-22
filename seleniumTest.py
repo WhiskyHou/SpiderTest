@@ -66,7 +66,6 @@ class Qunaspider(object):
                 print(e)
                 break
 
-
     def crawl(self, root_url, to_city):
         today = datetime.date.today().strftime('%Y-%m-%d')
         tomorrow = datetime.date.today()+datetime.timedelta(days=1)
