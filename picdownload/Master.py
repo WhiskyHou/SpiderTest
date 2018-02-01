@@ -5,8 +5,8 @@ from HtmlDownloader_1 import HtmlDownloader
 from PicDownloader_1 import PicDownloader
 from ItemParser_1 import ItemParser
 
-url = 'http://cl.z829.pw/thread0806.php?fid=16&search=&page=2'
-index = 'http://cl.z829.pw/'
+url = 'http://****'
+index = 'http://**'
 downloader = HtmlDownloader()
 home = HomeParser()
 item = ItemParser()
