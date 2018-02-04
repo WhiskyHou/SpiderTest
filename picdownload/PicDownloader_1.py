@@ -21,7 +21,8 @@ class PicDownloader(object):
                 file = open(title+'/'+str(i)+'.jpg', 'wb')
                 file.write(data)
                 file.close()
-                print(i)
+                print(title + str(i))
             except:
                 print('picture save failed')
             i += 1
+        print('work ' + title + ' was complete')
