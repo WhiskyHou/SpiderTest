@@ -14,10 +14,14 @@ pic_downloader = PicDownloader()
 
 html = downloader.download(url)
 urls, titles = home.parser(index, html)
-for i in range(0, 100):
+print(len(urls))
+print(titles[1])
+for i in range(0, len(urls)):
     item_html = downloader.download(urls[i])
     item_title = titles[i]
     pic_urls, title = item.parser(item_html, item_title)
+    # if pic_urls is None:
+    #     continue
     thread = threading.Thread(target=pic_downloader.download, args=(pic_urls, title))
     thread.start()
     thread.join(30)

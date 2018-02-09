@@ -7,6 +7,8 @@ class ItemParser(object):
             return
         soup = BeautifulSoup(html, 'lxml')
         contents = soup.find(class_='tpc_content do_not_catch')
+        if contents is None:
+            return None, None
         soup2 = BeautifulSoup(str(contents.contents), 'lxml')
         pic_contents = soup2.find_all('input')
         pic_urls = []
