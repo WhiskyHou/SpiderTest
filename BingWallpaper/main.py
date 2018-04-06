@@ -47,7 +47,7 @@ file.write(data)
 file.close()
 
 
-image_path = os.getcwd() + '/2018-04-05.jpg'
+image_path = os.getcwd() + '/' + str(today) + '.jpg'
 
 reg_key = win32api.RegOpenKeyEx(win32con.HKEY_CURRENT_USER, "Control Panel\\Desktop", 0, win32con.KEY_SET_VALUE)
 # 最后的参数:2拉伸,0居中,6适应,10填充,0平铺
